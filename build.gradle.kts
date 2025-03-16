@@ -23,15 +23,13 @@ repositories {
 
 dependencies {
 	implementation("org.liquibase:liquibase-core:4.29.1")
+	implementation("mysql:mysql-connector-java:8.0.33")
+	implementation("org.projectlombok:lombok:1.18.34")
 
-	compileOnly("org.projectlombok:lombok:1.18.34")
+	annotationProcessor("org.projectlombok:lombok:1.18.34")
 
 	runtimeOnly("com.h2database:h2")
 	runtimeOnly("com.mysql:mysql-connector-j:8.2.0")
-
-	annotationProcessor("org.projectlombok:lombok")
-
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.withType<Test> {
