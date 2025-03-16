@@ -25,11 +25,15 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
-	implementation("org.liquibase:liquibase-core")
-	compileOnly("org.projectlombok:lombok")
+	implementation("org.liquibase:liquibase-core:4.29.1")
+
+	compileOnly("org.projectlombok:lombok:1.18.34")
+
 	runtimeOnly("com.h2database:h2")
-	runtimeOnly("com.mysql:mysql-connector-j")
+	runtimeOnly("com.mysql:mysql-connector-j:8.0.33")
+
 	annotationProcessor("org.projectlombok:lombok")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
